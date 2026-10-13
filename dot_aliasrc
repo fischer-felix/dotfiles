@@ -1,0 +1,22 @@
+alias cp="xcp"                                                # use xcp
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB
+alias importpic='/home/felix/Archive/scripts/import_camera.sh'
+alias myip='curl http://ipecho.net/plain; echo'
+alias resolveconvert='/home/felix/Archive/scripts/Resolve-Convert/resolve_convert.sh'
+alias resolveconvert-dir='/home/felix/Archive/scripts/Resolve-Convert/resolve_convert_directory.sh'
+alias cpustats='watch -n 0.5 sudo turbostat --quiet -i 0.05 -n 1 -s Core,CPU,Avg_MHz,Busy%,Bzy_MHz,IPC,CorWatt,PkgWatt'
+alias widebug='/home/felix/Archive/scripts/widebug.sh'
+alias ll='ls -l'
+
+cdir() {
+	mkdir $1 && cd $1
+}
+
+alias c='clear'
+alias cc='cd && clear'
+alias r='source ~/.zshrc'
+alias e='exit'
+
+alias bw='flatpak run --command=bw com.bitwarden.desktop'
+alias pferd='pferd -c ~/Documents/Studium/KIT/PFERD/pferd.cfg'
