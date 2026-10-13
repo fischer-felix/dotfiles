@@ -1,5 +1,4 @@
-call plug#begin()
+runtime defaults.vim
+:set mouse=r
+:set tabstop=4
 
-Plug 'tpope/vim-commentary'
-
-call plug#end()
