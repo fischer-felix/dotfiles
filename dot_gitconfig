@@ -2,8 +2,15 @@
 	email = mail@felixf.eu
 	name = Felix Fischer
 	signingkey = /home/felix/.ssh/ssh-keys/vcs.ed25519.pub
+[core]
+	editor = vim
+    excludesFile = ~/.gitignore
+[init]
+	defaultBranch = main
 [gpg]
 	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed-signers
 [commit]
 	gpgsign = true
 [tag]
@@ -12,4 +19,6 @@
 	helper = libsecret
 [includeIf "gitdir:**/SCC-NET/**"]
 	path = /home/felix/Programming/SCC-NET/.gitconfig
+[includeIf "gitdir:/local/home/felix/Programming/cpp/ITAT/"]
+   	path = /local/home/felix/Programming/cpp/ITAT/.gitconfig
 
