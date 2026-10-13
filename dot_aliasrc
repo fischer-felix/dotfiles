@@ -18,5 +18,4 @@ alias cc='cd && clear'
 alias r='source ~/.zshrc'
 alias e='exit'
 
-alias bw='flatpak run --command=bw com.bitwarden.desktop'
 alias pferd='pferd -c ~/Documents/Studium/KIT/PFERD/pferd.cfg'
