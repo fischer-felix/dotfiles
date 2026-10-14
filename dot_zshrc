@@ -47,34 +47,58 @@ function kill-path-word()
 zle -N kill-path-word
 bindkey "^[^?" kill-path-word
 
-
-### ctrl+arrows
-bindkey "\e[1;5C" forward-word
-bindkey "\e[1;5D" backward-word
-# urxvt
-bindkey "\eOc" forward-word
-bindkey "\eOd" backward-word
-
-### ctrl+delete
-bindkey "\e[3;5~" kill-word
-# urxvt
-bindkey "\e[3^" kill-word
-
-### ctrl+backspace
-bindkey '^H' kill-path-word
-
-### ctrl+shift+delete
-bindkey "\e[3;6~" kill-line
-# urxvt
-bindkey "\e[3@" kill-line
-
-
 # zsh-autosuggestions
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '^ ' autosuggest-accept 	# Ctrl + Space to accept suggestion
 
 # zsh-vi-mode
+# must be defined BEFORE sourcing the plugin
+function zvm_after_init() {
+  # ctrl+space -> accept autosuggestion
+  bindkey -M viins '^@' autosuggest-accept
+
+  # ctrl+backspace
+  bindkey -M viins '^H' kill-path-word
+
+  # ctrl+delete
+  bindkey -M viins '\e[3;5~' kill-word
+  # urxvt ctrl+delete
+  bindkey -M viins '\e[3^' kill-word
+
+  # ctrl+shift+delete
+  bindkey -M viins '\e[3;6~' kill-line
+  # urxvt ctrl+shift+delete
+  bindkey -M viins '\e[3@' kill-line
+
+  # ctrl+arrows
+  bindkey -M viins '\e[1;5C' forward-word
+  bindkey -M viins '\e[1;5D' backward-word
+  # urxvt ctrl+arrows
+  bindkey -M viins '\eOc' forward-word
+  bindkey -M viins '\eOd' backward-word
+}
 source $HOME/.local/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+
+# ### ctrl+arrows
+# bindkey "\e[1;5C" forward-word
+# bindkey "\e[1;5D" backward-word
+# # urxvt
+# bindkey "\eOc" forward-word
+# bindkey "\eOd" backward-word
+
+# ### ctrl+delete
+# bindkey "\e[3;5~" kill-word
+# # urxvt
+# bindkey "\e[3^" kill-word
+
+# ### ctrl+backspace
+# bindkey '^H' kill-path-word
+
+# ### ctrl+shift+delete
+# bindkey "\e[3;6~" kill-line
+# # urxvt
+# bindkey "\e[3@" kill-line
+
 
 #------------------------------
 # Window title
