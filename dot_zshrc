@@ -73,6 +73,9 @@ bindkey "\e[3@" kill-line
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept 	# Ctrl + Space to accept suggestion
 
+# zsh-vi-mode
+source $HOME/.local/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
 #------------------------------
 # Window title
 #------------------------------
