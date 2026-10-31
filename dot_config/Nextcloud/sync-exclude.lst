@@ -47,3 +47,4 @@ no-sync/
 .git/
 .cookies
 len-spice/
+venv/
