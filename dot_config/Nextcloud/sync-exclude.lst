@@ -48,3 +48,14 @@ no-sync/
 .cookies
 len-spice/
 venv/
+*.synctex*
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.toc
