@@ -39,6 +39,14 @@ Host *.kit.edu *.bwnetops.de
   IdentityFile ~/.ssh/ssh-keys/scc-net/id_primary
   ProxyJump net-li-cs.scc.kit.edu
 
+# Physik Poolraum
+Host fphctssh.physik.kit.edu
+  User urutf
+
+# Homelab settings
+Host alma-e2micro-*.felixf.eu
+  User opc
+
 # General settings
 Host *
   Port 22
